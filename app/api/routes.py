@@ -7,9 +7,9 @@ router = APIRouter()
 
 @router.get("/to-unix")
 def convert_to_unix(utc: str = Query(..., description="UTC datetime ISO")):
-    return {"unix": utc_to_unix(utc)}
+    return utc_to_unix(utc)
 
 
 @router.get("/to-utc")
 def convert_to_utc(unix: int = Query(..., description="UNIX timestamp")):
-    return {"utc": unix_to_utc(unix)}
+    return unix_to_utc(unix)
