@@ -1,14 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Timestamp Microservice</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>timestamp microservice</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      color: #111;
+      background-color: #fff;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.2rem;
+    }
+
+    a {
+      color: #0000EE;
+      text-decoration: underline;
+    }
+
+    hr {
+      margin-top: 2rem;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+
+    .routes {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .footer {
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Timestamp Microservice</h1>
-  <p>Try these endpoints:</p>
-  <ul>
-    <li><code>/api/to-unix?utc=2024-05-15T12:00:00Z</code></li>
-    <li><code>/api/to-utc?unix=1715774400</code></li>
-  </ul>
+
+  <h1>timestamp microservice</h1>
+  <p>a simple microservice to convert between <strong>unix</strong> and <strong>utc</strong> time</p>
+
+  <p>built with <a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a> · containerized with <a href="https://www.docker.com/" target="_blank">Docker</a></p>
+
+  <div class="routes">
+    <h3>example routes:</h3>
+    <ul>
+      <li><a href="/convert?unix=1715820810">/convert?unix=1715820810</a></li>
+      <li><a href="/convert?utc=2025-05-16T02:53:00">/convert?utc=2025-05-16T02:53:00</a></li>
+      <li><a href="/now">/now</a></li>
+    </ul>
+  </div>
+
+  <hr/>
+
+  <div class="footer">
+    <!-- replace with project repo later -->
+    <p><a href="https://github.com/kaushalrijal" target="_blank">open source</a></p>
+    <p>&copy; 2025 · open for collaborations</p>
+  </div>
+
 </body>
 </html>
