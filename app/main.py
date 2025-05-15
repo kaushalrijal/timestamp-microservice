@@ -17,7 +17,7 @@ async def root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
-@app.get("/now")
+@app.get("/api/now")
 def get_current_timestamp():
     now_utc = datetime.now(timezone.utc)
     unix_time = int(now_utc.timestamp())
